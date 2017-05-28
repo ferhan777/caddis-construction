@@ -31,10 +31,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  	  $username=$this->input->post('username');
  	  $password=$this->input->post('password');
  	  $user=$this->user_model->auth($username,$password);
+ 	  $id=$user['0']['id'];
  	  if(!$user){
  	  	$data['error']=true;//this was the last task
+ 	  	//echo "user not found";
  	  }else{
- 	  	echo "not found";
+ 	  
+       $this->session->set_userdata('username',$username);
+       $this->session->set_userdata('id',$id);
+       //echo $test=$this->session->userdata('username');
+ 	   //redirect(base_url().'admin/');
  	  }	
  	 }else{	
  	 $this->load->view('templates/header');

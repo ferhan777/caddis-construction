@@ -21,7 +21,7 @@
     {
       $image_crud = new Image_CRUD();
  
-	  $image_crud->set_table('example_1');
+	  $image_crud->set_table('images');
  
 	  //If your table have by default the "id" field name as a primary key this line is not required
 	  $image_crud->set_primary_key_field('id');
