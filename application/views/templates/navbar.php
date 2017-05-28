@@ -9,7 +9,7 @@
           <span class="[ icon-bar ]"></span>
         </button>
         <div class="[ animbrand ]">
-          <a class="[ navbar-brand ][ animate ]" href="<?=base_url();?>">BRAND</a>
+          <a class="[ navbar-brand ][ animate ]" href="<?=base_url();?>">CADDIS</a>
         </div>
       </div>
 

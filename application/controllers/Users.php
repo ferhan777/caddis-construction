@@ -31,8 +31,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  	  $username=$this->input->post('username');
  	  $password=$this->input->post('password');
  	  $user=$this->user_model->auth($username,$password);
- 	  if($user){
- 	  	echo "found";
+ 	  if(!$user){
+ 	  	$data['error']=true;//this was the last task
  	  }else{
  	  	echo "not found";
  	  }	
@@ -44,5 +44,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  	 }
  	}
  	}//closing of the function 
+
+ 	function logout(){
+ 	 $this->session->sess_destroy();
+ 	 redirect(base_url().'home');	
+ 	}
  }//closing of the class
 ?>
